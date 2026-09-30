@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phạm Minh Hiếu - Data Analytics Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: '#0F172A',
+                        primary: '#2563EB',
+                        surface: '#FAF9F6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #FAF9F6; color: #0F172A; }
+        .glass { background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .text-gradient { background: linear-gradient(to right, #2563EB, #06B6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02); }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-100 selection:text-blue-900">
+
+<!-- Navigation -->
+<nav class="fixed w-full z-50 glass transition-all duration-300">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="#" class="font-bold text-lg tracking-tight">Phạm Minh Hiếu.</a>
+        <div class="hidden sm:flex space-x-8 text-sm font-semibold text-gray-600">
+            <a href="#about" class="hover:text-primary transition-colors">Giới thiệu</a>
+            <a href="#skills" class="hover:text-primary transition-colors">Kỹ năng</a>
+            <a href="#projects" class="hover:text-primary transition-colors">Dự án Data</a>
+            <a href="#contact" class="hover:text-primary transition-colors">Liên hệ</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="about" class="pt-36 pb-20 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <!-- Left Content (Text) -->
+    <div class="flex-1 flex flex-col items-start text-left">
+        <!-- Name -->
+        <h1 class="text-6xl sm:text-[80px] font-black mb-4 text-navy tracking-tight" style="font-family: 'Playfair Display', serif; letter-spacing: -0.03em;">
+            Phạm Minh Hiếu
+        </h1>
+
+        <!-- Subtitle -->
+        <h2 class="text-xl sm:text-[22px] font-bold text-navy mb-6 leading-relaxed">
+            Sinh Viên Tốt Nghiệp Ngành Quản trị Và An Ninh · Đại học Quốc gia Hà Nội
+        </h2>
+
+        <!-- Skill Tags -->
+        <div class="flex flex-wrap gap-2.5 mb-8">
+            <span class="inline-flex items-center px-4 py-1.5 rounded-xl bg-white border border-gray-200 text-gray-700 font-bold text-xs shadow-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-2"></span> Phân tích dữ liệu
+            </span>
+            <span class="inline-flex items-center px-4 py-1.5 rounded-xl bg-white border border-gray-200 text-gray-700 font-bold text-xs shadow-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-2"></span> Mô hình hóa dữ liệu
+            </span>
+            <span class="inline-flex items-center px-4 py-1.5 rounded-xl bg-white border border-gray-200 text-gray-700 font-bold text-xs shadow-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-2"></span> Xử lí và làm sạch dữ liệu
+            </span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-lg text-gray-600 mb-10 leading-relaxed max-w-2xl font-medium">
+            Sinh viên tốt nghiệp ngành Quản trị và An Ninh tại ĐHQGHN, hỗ trợ làm rõ và chuyển hóa dữ liệu của khách hàng thành các bộ báo cáo trực quan và mô hình dữ liệu chuẩn xác, giúp quản lý thấu hiểu hệ thống kinh doanh và đưa ra các quyết định chiến lược hiệu quả.
+        </p>
+
+        <!-- Buttons -->
+        <div class="flex flex-wrap gap-4">
+            <a href="#projects" class="bg-[#2563EB] hover:bg-blue-700 text-white px-8 py-3.5 rounded-xl font-bold transition-all shadow-md shadow-blue-500/20 flex items-center gap-2">
+                Xem dự án <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </a>
+            <a href="#contact" class="bg-white hover:bg-gray-50 text-navy border border-gray-200 px-8 py-3.5 rounded-xl font-bold transition-all shadow-sm">Kết nối ngay</a>
+        </div>
+    </div>
+
+    <!-- Right Content (Image Profile) -->
+    <div class="w-full md:w-5/12 lg:w-4/12 flex justify-center mt-10 md:mt-0 relative group">
+        <div class="relative w-full aspect-[3/4] max-w-[400px] transition-transform duration-500 group-hover:-translate-y-2">
+            <!-- Background Offset Shape (Top Right Light Blue) -->
+            <div class="absolute inset-0 border border-blue-200 bg-blue-50/50 rounded-3xl translate-x-4 -translate-y-4 -z-10 shadow-sm"></div>
+            <!-- Actual Image Container -->
+            <div class="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl z-10 bg-white ring-1 ring-gray-200">
+                <img src="profile1.jpg" alt="Phạm Minh Hiếu Avatar" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 01 - Giới Thiệu Section -->
+<section id="introduction" class="py-24 px-6 bg-surface">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+        <!-- Image Card -->
+        <div class="w-full md:w-5/12 flex justify-center order-2 md:order-1">
+            <div class="relative w-full aspect-[3/4] max-w-[420px] rounded-3xl shadow-xl ring-1 ring-gray-200 overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+                <img src="profile2.jpg" alt="Phạm Minh Hiếu Intro" class="w-full h-full object-cover object-bottom">
+            </div>
+        </div>
+
+        <!-- Text Content -->
+        <div class="w-full md:w-7/12 flex flex-col items-start text-left order-1 md:order-2">
+            <h3 class="text-sm font-bold text-primary tracking-widest uppercase mb-4 flex items-center gap-2">
+                <span class="w-8 h-[2px] bg-primary"></span> 01 · GIỚI THIỆU
+            </h3>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-navy mb-6 leading-tight" style="font-family: 'Playfair Display', serif;">
+                Tư duy Phân tích & Năng lực Kỹ thuật
+            </h2>
+
+            <div class="space-y-4 text-gray-600 font-medium leading-relaxed mb-8">
+                <p>Tôi là sinh viên đã tốt nghiệp chuyên ngành <strong>Quản trị và An Ninh</strong> tại <strong>Trường Quản trị và Kinh doanh (HSB) – Đại học Quốc gia Hà Nội</strong>. Chương trình học trang bị cho tôi lăng kính kép từ hai hướng song song: quản trị doanh nghiệp (marketing, tài chính, nghiên cứu thị trường, chiến lược) và công nghệ thông tin (cơ sở dữ liệu, thiết kế hệ thống, lập trình, phân tích dữ liệu) — với trọng tâm là ứng dụng công nghệ để giải quyết bài toán thực tế của doanh nghiệp.</p>
+                <p>Tôi định hướng trở thành <strong>Data Analyst, Data Scientist hoặc Data Engineer</strong> để đứng ở điểm giao thoa đó — làm cầu nối giữa khách hàng, bộ phận kinh doanh và đội ngũ lập trình viên. Tôi mong muốn chuyển những gì doanh nghiệp cần thành yêu cầu rõ ràng để đội kỹ thuật có thể triển khai đúng và đủ. Với tinh thần trách nhiệm và ham học hỏi, tôi muốn đảm bảo không một thông tin nào bị hiểu sai trong quá trình chuyển đổi đó.</p>
+            </div>
+
+            <!-- 3 Mini Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
+                <div class="p-5 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-xs uppercase mb-1 text-slate-800">TƯ DUY LOGIC</h4>
+                    <p class="text-xs text-gray-500 font-medium">Phân tích vấn đề mạch lạc, hệ thống và tối ưu hóa giải pháp.</p>
+                </div>
+                <div class="p-5 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-8 h-8 rounded-full bg-green-50 text-green-600 flex items-center justify-center mb-4">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-xs uppercase mb-1 text-slate-800">TÍNH CÁCH CỐT LÕI</h4>
+                    <p class="text-xs text-gray-500 font-medium">Luôn cầu tiến, tinh thần trách nhiệm cao và chủ động học hỏi.</p>
+                </div>
+                <div class="p-5 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-8 h-8 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center mb-4">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-xs uppercase mb-1 text-slate-800">THÍCH NGHI NHANH</h4>
+                    <p class="text-xs text-gray-500 font-medium">Sẵn sàng đón nhận thử thách mới, thích nghi nhanh chóng.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 02 - Định hướng nghề nghiệp -->
+<section id="career" class="py-24 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-5xl mx-auto text-center mb-16">
+        <h3 class="text-sm font-bold text-primary tracking-widest uppercase mb-4">02 · ĐỊNH HƯỚNG NGHỀ NGHIỆP</h3>
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-navy" style="font-family: 'Playfair Display', serif;">Mục Tiêu Sự Nghiệp</h2>
+        <p class="text-gray-500 font-medium mt-4">Lộ trình phát triển toàn diện từ Data Fresher chủ động đến Senior dẫn dắt dự án độc lập.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Short Term Card -->
+        <div class="bg-surface rounded-3xl p-8 sm:p-10 border border-gray-100 flex flex-col h-full hover:shadow-xl transition-all duration-300">
+            <div class="flex items-start gap-4 mb-8">
+                <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <div>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">NGẮN HẠN (1-12 THÁNG)</span>
+                    <h3 class="text-2xl font-bold text-navy mt-1" style="font-family: 'Playfair Display', serif;">Fresher / Junior Data Analyst</h3>
+                </div>
+            </div>
+            
+            <p class="text-gray-600 font-medium leading-relaxed mb-auto pb-4">
+                Học hỏi quy trình phát triển thực tế và quan sát cách các chuyên gia phỏng vấn lấy yêu cầu từ khách hàng. Đồng thời, chủ động hỗ trợ quản lý dự án trong việc xây dựng tài liệu, khai phá dữ liệu và thiết lập Dashboard báo cáo trực quan cho ban giám đốc.
+            </p>
+            
+            <div class="mt-8 pt-6 border-t border-gray-200 flex items-center justify-between">
+                <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">TRỌNG TÂM ĐÓNG GÓP</span>
+                <span class="text-xs font-bold bg-blue-50 text-blue-600 px-3 py-1 rounded-full">Trực quan hóa & Báo cáo</span>
+            </div>
+        </div>
+
+        <!-- Long Term Card -->
+        <div class="bg-surface rounded-3xl p-8 sm:p-10 border border-gray-100 flex flex-col h-full hover:shadow-xl transition-all duration-300">
+            <div class="flex items-start gap-4 mb-8">
+                <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                </div>
+                <div>
+                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest">DÀI HẠN (2-3 NĂM TỚI)</span>
+                    <h3 class="text-2xl font-bold text-navy mt-1" style="font-family: 'Playfair Display', serif;">Senior Data Science / Data Engineer</h3>
+                </div>
+            </div>
+            
+            <p class="text-gray-600 font-medium leading-relaxed mb-auto pb-4">
+                Tích lũy kinh nghiệm thực chiến và nâng cao năng lực chuyên môn để trở thành Senior Data chuyên nghiệp. Có khả năng tự dẫn dắt và chịu trách nhiệm độc lập cho các dự án tích hợp dữ liệu khổng lồ, tạo ra các giải pháp Data Pipeline hiệu suất cao cho doanh nghiệp.
+            </p>
+            
+            <div class="mt-8 pt-6 border-t border-gray-200 flex items-center justify-between">
+                <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">ĐỊNH HƯỚNG PHÁT TRIỂN</span>
+                <span class="text-xs font-bold bg-emerald-50 text-emerald-600 px-3 py-1 rounded-full">Quản trị & Làm chủ dự án</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 03 - Bản Đồ Năng Lực (Skills) -->
+<section id="skills" class="py-24 px-6 bg-surface">
+    <div class="max-w-4xl mx-auto text-center mb-16">
+        <h3 class="text-sm font-bold text-primary tracking-widest uppercase mb-4">03 · BẢN ĐỒ NĂNG LỰC</h3>
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-navy" style="font-family: 'Playfair Display', serif;">Kỹ Năng Chuyên Môn</h2>
+        <p class="text-gray-500 font-medium mt-4">Sự kết hợp tối ưu giữa kỹ năng phân tích đặc tả, nền tảng kỹ thuật và khả năng giao tiếp nghiệp vụ kinh doanh.</p>
+    </div>
+
+    <!-- Skill Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <!-- SQL -->
+        <div class="p-8 bg-white border border-gray-100 rounded-3xl hover:shadow-lg transition-all duration-300">
+            <h4 class="text-xl font-bold text-navy mb-3" style="font-family: 'Playfair Display', serif;">Truy vấn & Cơ sở dữ liệu (SQL)</h4>
+            <p class="text-sm text-gray-600 font-medium leading-relaxed">
+                Khai thác cơ sở dữ liệu lớn đa chiều. Chuyên sâu về Joins, CTE, Window Functions và Aggregations để chuyển đổi dữ liệu chuẩn xác.
+            </p>
+        </div>
+        <!-- Power BI -->
+        <div class="p-8 bg-white border border-gray-100 rounded-3xl hover:shadow-lg transition-all duration-300">
+            <h4 class="text-xl font-bold text-navy mb-3" style="font-family: 'Playfair Display', serif;">Power BI & Trực quan hoá</h4>
+            <p class="text-sm text-gray-600 font-medium leading-relaxed">
+                Thiết kế luồng Data Modeling (Star Schema), xử lý Power Query, viết hàm DAX và thiết kế Dashboard báo cáo sinh động.
+            </p>
+        </div>
+        <!-- Python -->
+        <div class="p-8 bg-white border border-gray-100 rounded-3xl hover:shadow-lg transition-all duration-300">
+            <h4 class="text-xl font-bold text-navy mb-3" style="font-family: 'Playfair Display', serif;">Python & Xử lý Dữ liệu</h4>
+            <p class="text-sm text-gray-600 font-medium leading-relaxed">
+                Sử dụng thư viện vạn năng Pandas, NumPy cho Exploratory Data Analysis (EDA) và Data Cleaning trên các tập dữ liệu phức tạp.
+            </p>
+        </div>
+        <!-- English -->
+        <div class="p-8 bg-white border border-gray-100 rounded-3xl hover:shadow-lg transition-all duration-300">
+            <h4 class="text-xl font-bold text-navy mb-3" style="font-family: 'Playfair Display', serif;">Ngoại ngữ B2 (Aptis ESOL)</h4>
+            <p class="text-sm text-gray-600 font-medium leading-relaxed">
+                Chứng chỉ B2 Aptis ESOL. Tự tin đọc hiểu tài liệu chuyên ngành, tiếp cận công nghệ mới và giao tiếp trong môi trường quốc tế.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- 04 - Sản Phẩm Tiêu Biểu -->
+<section id="projects" class="py-24 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-4xl mx-auto text-center mb-16">
+        <h3 class="text-sm font-bold text-primary tracking-widest uppercase mb-4">04 · SẢN PHẨM TIÊU BIỂU</h3>
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-navy" style="font-family: 'Playfair Display', serif;">Sản Phẩm & Tài Liệu</h2>
+        <p class="text-gray-500 font-medium mt-4">Những dự án thực hành phân tích chuyên sâu, kết xuất các Dashboard báo cáo có thể chỉ ra các vấn đề đang gặp phải.</p>
+    </div>
+
+    <div class="max-w-4xl mx-auto space-y-12">
+        <!-- Project 1 -->
+        <div class="bg-white rounded-3xl border border-gray-200 shadow-sm p-8 sm:p-10 hover:shadow-xl transition-all duration-300">
+            <span class="text-primary font-bold mb-4 block text-sm tracking-widest">01</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-navy mb-3 leading-tight" style="font-family: 'Playfair Display', serif;">E-Commerce Customer Behavior (BikeStore)</h3>
+            <p class="text-xs font-bold text-blue-600 mb-6 flex flex-wrap gap-2">
+                <span class="bg-blue-50 px-3 py-1.5 rounded-lg">Power BI</span>
+                <span class="bg-blue-50 px-3 py-1.5 rounded-lg">DAX</span>
+                <span class="bg-blue-50 px-3 py-1.5 rounded-lg">Market Basket</span>
+            </p>
+            <p class="text-gray-600 font-medium leading-relaxed mb-8">
+                Dự án phân tích hành vi khách hàng Retail. Mô hình hóa dữ liệu (Star Schema) cho 28K+ giao dịch. Thiết kế Dashboard 7 trang để triển khai phân tầng khách hàng RFM và khơi thông Market Basket Analysis. Qua đó phát hiện tỷ lệ rủi ro rời bỏ (Churn risk) chạm mức 33% ở phân khúc V.I.P và đề xuất Cross-sell tỷ lệ 81%.
+            </p>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiYWRiMmE0OWYtMTAzZC00YjQ1LTgzYTItMmUyYzY3NmU5MmYyIiwidCI6IjVlOGIzMjY5LTc2Y2EtNDU3Yy04NDdmLTQ0NGUzZGI5ODZhNyIsImMiOjl9" target="_blank" class="inline-flex items-center justify-center bg-navy hover:bg-blue-600 text-white font-bold py-3.5 px-8 rounded-full transition-all text-sm shadow-md gap-2">
+                Xem Case chi tiết ↗
+            </a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-white rounded-3xl border border-gray-200 shadow-sm p-8 sm:p-10 hover:shadow-xl transition-all duration-300">
+            <span class="text-blue-600 font-bold mb-4 block text-sm tracking-widest">02</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-navy mb-3 leading-tight" style="font-family: 'Playfair Display', serif;">CASA Balance Optimization Analytics</h3>
+            <p class="text-xs font-bold text-blue-600 mb-6 flex flex-wrap gap-2">
+                <span class="bg-blue-50 px-3 py-1.5 rounded-lg">Python (Pandas)</span>
+                <span class="bg-blue-50 px-3 py-1.5 rounded-lg">Data Cleaning</span>
+                <span class="bg-blue-50 px-3 py-1.5 rounded-lg">Power BI</span>
+            </p>
+            <p class="text-gray-600 font-medium leading-relaxed mb-8">
+                Hệ thống phân tích dòng tiền không kỳ hạn (CASA). Xử lý hàng loạt 100K+ dữ liệu giao dịch bằng mã Python (Pandas/Numpy) trước khi đưa sang mô hình DAX của Power BI để thiết lập 4 trang báo cáo tài chính cá nhân. Chỉ ra lỗ hổng thâm hụt lên tới 300 triệu USD (7.8 ngàn tỷ VNĐ) ở nhóm khách VIP tiền gửi.
+            </p>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiMTAxYTI4NzItNGJkMC00MDU3LTk0MjAtZTIzOWFhZWIyMmY5IiwidCI6IjVlOGIzMjY5LTc2Y2EtNDU3Yy04NDdmLTQ0NGUzZGI5ODZhNyIsImMiOjl9" target="_blank" class="inline-flex items-center justify-center bg-navy hover:bg-blue-600 text-white font-bold py-3.5 px-8 rounded-full transition-all text-sm shadow-md gap-2">
+                Xem Case chi tiết ↗
+            </a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-white rounded-3xl border border-gray-200 shadow-sm p-8 sm:p-10 hover:shadow-xl transition-all duration-300">
+            <span class="text-blue-600 font-bold mb-4 block text-sm tracking-widest">03</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-navy mb-3 leading-tight" style="font-family: 'Playfair Display', serif;">Workforce & HR Analytics System</h3>
+            <p class="text-xs font-bold text-blue-600 mb-6 flex flex-wrap gap-2">
+                <span class="bg-blue-50 px-3 py-1.5 rounded-lg">Power BI</span>
+                <span class="bg-blue-50 px-3 py-1.5 rounded-lg">Data Modeling</span>
+                <span class="bg-blue-50 px-3 py-1.5 rounded-lg">Insight Generation</span>
+            </p>
+            <p class="text-gray-600 font-medium leading-relaxed mb-8">
+                Dự án giám sát hiệu suất và luân chuyển nguồn nhân lực nội bộ. Khai phá tập dữ liệu từ nhiều nguồn (Khảo sát, Time-tracking) để theo dõi các chỉ số tuổi tác, sự nghiệp và tỷ lệ biến động (Attrition). Tìm ra mối tương quan ẩn giữa khoảng cách địa lý xa, thăng tiến chậm và hội chứng kiệt sức cường độ cao.
+            </p>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiNzI3YmNjM2QtM2RhZi00YWUxLWJhMjMtNTk0MTliODQ2Yzc5IiwidCI6IjVlOGIzMjY5LTc2Y2EtNDU3Yy04NDdmLTQ0NGUzZGI5ODZhNyIsImMiOjl9" target="_blank" class="inline-flex items-center justify-center bg-navy hover:bg-blue-600 text-white font-bold py-3.5 px-8 rounded-full transition-all text-sm shadow-md gap-2">
+                Xem Case chi tiết ↗
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- 06 - Châm Ngôn Làm Việc -->
+<section class="py-32 px-6 bg-surface border-y border-gray-100">
+    <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-sm font-bold text-primary tracking-widest uppercase mb-10">06 · CHÂM NGÔN LÀM VIỆC</h3>
+        <h2 class="text-3xl sm:text-5xl font-black text-navy leading-snug italic" style="font-family: 'Playfair Display', serif;">
+            “If you don't believe in yourself, who will?”
+        </h2>
+        <div class="w-16 h-[2px] bg-primary mx-auto mt-10 opacity-50"></div>
+    </div>
+</section>
+
+<!-- 07 - Liên Hệ & Kết Nối -->
+<section id="contact" class="py-24 px-6 bg-[#111827] text-white overflow-hidden relative">
+    <!-- Nền trang trí siêu việt -->
+    <div class="absolute inset-0 bg-[#0F172A]"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent"></div>
+    
+    <div class="max-w-6xl mx-auto relative z-10">
+        <div class="flex flex-col lg:flex-row gap-16">
+            <!-- Left Contact Info -->
+            <div class="w-full lg:w-5/12">
+                <h3 class="text-sm font-bold text-blue-500 tracking-widest uppercase mb-4">07 · LIÊN HỆ & KẾT NỐI</h3>
+                <h2 class="text-4xl sm:text-5xl font-extrabold mb-6 text-white" style="font-family: 'Playfair Display', serif;">Kết Nối Với Hiếu</h2>
+                <p class="text-slate-400 font-medium mb-12 leading-relaxed">
+                    Cảm ơn Quý nhà tuyển dụng và doanh nghiệp đã dành thời gian xem qua hồ sơ năng lực trực tuyến của em. Em rất mong muốn được trao đổi chi tiết hơn qua một buổi phỏng vấn trực tiếp.
+                </p>
+
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 bg-slate-800/40 border border-slate-700/50 p-5 rounded-2xl hover:border-blue-500/30 transition-colors">
+                        <div class="w-10 h-10 rounded-full bg-slate-700/50 flex items-center justify-center border border-slate-600">
+                            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-slate-500 uppercase">ĐIỆN THOẠI</p>
+                            <p class="font-bold text-lg text-slate-200">0912 365 602</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-4 bg-slate-800/40 border border-slate-700/50 p-5 rounded-2xl hover:border-blue-500/30 transition-colors">
+                        <div class="w-10 h-10 rounded-full bg-slate-700/50 flex items-center justify-center border border-slate-600">
+                            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-slate-500 uppercase">ĐỊA CHỈ EMAIL</p>
+                            <a href="mailto:hieupham11.data@gmail.com" class="font-bold text-lg text-slate-200 hover:text-blue-400 transition-colors tracking-tight">hieupham11.data@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 bg-slate-800/40 border border-slate-700/50 p-5 rounded-2xl hover:border-blue-500/30 transition-colors">
+                        <div class="w-10 h-10 rounded-full bg-slate-700/50 flex items-center justify-center border border-slate-600">
+                            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-slate-500 uppercase">ĐỊA ĐIỂM SINH SỐNG</p>
+                            <p class="font-bold text-lg text-slate-200">Phú Diễn, Cầu Giấy, Hà Nội</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Message Form -->
+            <div class="w-full lg:w-7/12">
+                <div class="bg-[#1E293B]/80 backdrop-blur-md border border-slate-700/80 rounded-2xl p-8 sm:p-10 shadow-2xl">
+                    <h4 class="text-xl font-bold mb-1 text-white">Gửi lời nhắn nhanh cho Hiếu</h4>
+                    <p class="text-sm text-slate-400 mb-8 font-medium">(Gửi trực tiếp đến Gmail thông qua Mailto)</p>
+
+                    <form action="mailto:hieupham11.data@gmail.com" method="GET" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-400 uppercase mb-2 tracking-wider">HỌ & TÊN ANH/CHỊ *</label>
+                                <input type="text" placeholder="Nguyễn Văn A" class="w-full bg-[#0F172A] border border-slate-700 rounded-lg px-4 py-3.5 text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-400 uppercase mb-2 tracking-wider">ĐỊA CHỈ EMAIL LIÊN HỆ *</label>
+                                <input type="email" placeholder="recruiter@company.com" class="w-full bg-[#0F172A] border border-slate-700 rounded-lg px-4 py-3.5 text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition-colors">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-400 uppercase mb-2 tracking-wider">TIÊU ĐỀ CÔNG VIỆC</label>
+                            <input type="text" name="subject" placeholder="Lời mời phỏng vấn Fresher Data Analyst" class="w-full bg-[#0F172A] border border-slate-700 rounded-lg px-4 py-3.5 text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-400 uppercase mb-2 tracking-wider">NỘI DUNG TIN NHẮN *</label>
+                            <textarea name="body" rows="4" placeholder="Chào Hiếu, anh/chị đã xem qua tài liệu Dashboard của em..." class="w-full bg-[#0F172A] border border-slate-700 rounded-lg px-4 py-3.5 text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition-colors"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                            Gửi lời nhắn liên hệ
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#0b1121] border-t border-slate-800 py-8 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm font-medium">
+        <p>© 2026 Phạm Minh Hiếu. Tất cả quyền được bảo lưu.</p>
+        <div class="flex gap-6">
+            <a href="#introduction" class="hover:text-blue-400 transition-colors">Giới thiệu</a>
+            <a href="#skills" class="hover:text-blue-400 transition-colors">Kỹ năng</a>
+            <a href="#projects" class="hover:text-blue-400 transition-colors">Dự án</a>
+            <a href="#" class="hover:text-blue-400 transition-colors">Tải CV ↗</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
